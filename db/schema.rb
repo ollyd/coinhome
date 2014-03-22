@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140321034700) do
     t.string  "address_number"
     t.string  "address_street"
     t.string  "address_city"
+    t.string  "address_suburb"
     t.string  "address_state"
     t.string  "address_code"
     t.string  "address_country"

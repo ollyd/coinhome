@@ -18,6 +18,7 @@
 #  address_number  :string(255)
 #  address_street  :string(255)
 #  address_city    :string(255)
+#  address_suburb  :string(255)
 #  address_state   :string(255)
 #  address_code    :string(255)
 #  address_country :string(255)
@@ -27,7 +28,7 @@
 class Property < ActiveRecord::Base
     attr_accessible :style, :price, :image, :sqr_ft, :bedrooms, :bathrooms, :garages,
     :description, :map_image, :map_link, :sale_status, :date_listed, :address_number, 
-    :address_street, :address_city, :address_state, :address_code, :address_country, :user_id
+    :address_street, :address_suburb, :address_city, :address_state, :address_code, :address_country, :user_id
 
     belongs_to :user
 end

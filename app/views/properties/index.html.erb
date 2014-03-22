@@ -1,0 +1,11 @@
+<h3>Current Properties</h3>
+
+<% @properties.each do |property| %>
+    <ul>
+        <li><%= link_to(image_tag(property.image)) %></li>
+        <li><%= property.date_listed %></li>
+        <li><%= property.address_number %></li>
+        <li><%= property.address_street %></li>
+        <li><%= property.price %></li>
+    </ul>
+<% end %>
