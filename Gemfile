@@ -37,6 +37,8 @@ gem 'sextant'
 
 gem 'bcrypt-ruby'
 
+gem 'httparty'
+
 gem 'pry-rails'
 gem 'pry-debugger'
 gem 'pry-stack_explorer'

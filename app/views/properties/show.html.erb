@@ -2,7 +2,8 @@
     <ul>
         <li><%= image_tag @property.image %></li>
         <li>Date Listed: <%= @property.date_listed %></li>
-        <li>Price: <%= number_to_currency(@property.price) %></li>
+        <li>AUD Price: <%= number_to_currency(@property.price, strip_insignificant_zeros: true) %></li>
+        <li>BTC Price: <%= number_with_precision(@property.price/@last_traded_price, precision: 6) %></li>
         <li>Bedroom: <%= @property.bedrooms %></li>
         <li>Bathrooms: <%= @property.bathrooms %></li>
         <li>Garages: <%= @property.garages %></li>

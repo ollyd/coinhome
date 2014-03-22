@@ -18,6 +18,10 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find params[:id]
+
+    api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
+    @last_traded_price = api['last']
+    
   end
 
   def update
