@@ -1,7 +1,7 @@
 class CreateProperties < ActiveRecord::Migration
   def change
     create_table :properties do |t|
-        t.string :type
+        t.string :style
         t.decimal :price
         t.text :image
         t.integer :sqr_ft

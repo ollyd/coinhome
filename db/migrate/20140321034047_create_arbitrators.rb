@@ -4,6 +4,7 @@ class CreateArbitrators < ActiveRecord::Migration
         t.string :name
         t.text :description
         t.string :public_key
+        t.string :email
     end
   end
 end

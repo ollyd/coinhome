@@ -6,10 +6,11 @@
 #  name        :string(255)
 #  description :text
 #  public_key  :string(255)
+#  email       :string(255)
 #
 
 class Arbitrator < ActiveRecord::Base
-    attr_accessible :name, :description, :public_key
+    attr_accessible :name, :description, :public_key, :email
 
     has_and_belongs_to_many :users
 end

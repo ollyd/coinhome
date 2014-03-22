@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140321034700) do
     t.string "name"
     t.text   "description"
     t.string "public_key"
+    t.string "email"
   end
 
   create_table "arbitrators_users", id: false, force: true do |t|
@@ -28,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140321034700) do
   end
 
   create_table "properties", force: true do |t|
-    t.string  "type"
+    t.string  "style"
     t.decimal "price"
     t.text    "image"
     t.integer "sqr_ft"

@@ -3,8 +3,8 @@
 # Table name: properties
 #
 #  id              :integer          not null, primary key
-#  type            :string(255)
-#  price           :string(255)
+#  style           :string(255)
+#  price           :decimal(, )
 #  image           :text
 #  sqr_ft          :integer
 #  bedrooms        :integer
@@ -24,9 +24,9 @@
 #
 
 class Property < ActiveRecord::Base
-    attr_accessible :type, :price, :image, :sqr_ft, :bedrooms, :bathrooms, :garages,
+    attr_accessible :style, :price, :image, :sqr_ft, :bedrooms, :bathrooms, :garages,
     :description, :map_image, :map_link, :sale_status, :date_listed, :address_number, 
-    :address_street, :address_city, :address_state, :address_code, :address_country
+    :address_street, :address_city, :address_state, :address_code, :address_country, :user_id
 
     belongs_to :user
 end

@@ -1,3 +1,7 @@
+Property.destroy_all
+User.destroy_all
+Arbitrator.destroy_all
+
 p1 = Property.create(:type => 'house', :price => 2000000, :image => 
     'http://images-2.domain.com.au/2011/03/24/2249963/bomera_04_1024-600x400.jpg', 
     :sqr_ft => 2500, :bedrooms => 6, :bathrooms => 4, :garages => 2,
@@ -13,6 +17,12 @@ p1 = Property.create(:type => 'house', :price => 2000000, :image =>
     :address_country => 'Australia')
 
 u1 = User.create(:name => 'Alan Watts', :gender => 'male', :age => 45, 
-    :address_number => '34/67', :address_street => 'Futong Street', :address_city => 'Beijing', :address_state, :address_code, 
-    :address_country,
-    :email )
+    :address_number => '19', :address_street => 'Guang Shun Nan Da Jie', :address_city => 'WangJing', 
+    :address_state => 'Beijing', :address_code => '100102', 
+    :address_country => 'China', :email => 'alanwatts@gmail.com')
+
+a = Arbitrator.create(:name => 'Judge Aaron Davis', :description => '17 years of experience in small 
+    claims arbitration for the Utah State Courts. As a long-time bitcoin owner and believer in the future
+    of the currency, I am happy to offer arbitration for Coin Home. I will use the legal jurisdiction 
+    I am most familiar with, which is Utah State law. Fee structure varies on a case-by-case basis, 
+    with a maximum fee of 0.2 BTC.', :email => 'jadavis@gmail.com')
