@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140321034700) do
     t.string  "address_state"
     t.string  "address_code"
     t.string  "address_country"
+    t.integer "user_id"
   end
 
   create_table "users", force: true do |t|

@@ -19,6 +19,7 @@ class CreateProperties < ActiveRecord::Migration
         t.string :address_state
         t.string :address_code
         t.string :address_country
+        t.integer :user_id
     end
   end
 end

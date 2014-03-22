@@ -21,6 +21,7 @@
 #  address_state   :string(255)
 #  address_code    :string(255)
 #  address_country :string(255)
+#  user_id         :integer
 #
 
 class Property < ActiveRecord::Base
