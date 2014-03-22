@@ -1,2 +1,8 @@
-<h1>Arbitrators#index</h1>
-<p>Find me in app/views/arbitrators/index.html.erb</p>
+<h3>Browse Our Arbitrators</h3>
+
+<% @arbitrators.each do |arbitrator| %>
+    <ul>
+        <li><%= arbitrator.name %></li>
+        <li><%= truncate(arbitrator.description, length: 200) { link_to "View Profile", arbitrator } %></li>
+    </ul>
+<% end %>

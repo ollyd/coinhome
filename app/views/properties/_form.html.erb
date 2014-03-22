@@ -1,0 +1,59 @@
+<%= form_for @property do |f| %>
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.label :sqr_ft %>
+    <%= f.text_field :sqr_ft %>
+
+    <%= f.label :bedrooms %>
+    <%= f.text_field :bedrooms %>
+
+    <%= f.label :bathrooms %>
+    <%= f.text_field :bathrooms %>
+
+    <%= f.label :garages %>
+    <%= f.text_field :garages %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :map_image %>
+    <%= f.text_field :map_image %>
+
+    <%= f.label :date_listed %>
+    <%= f.text_field :date_listed %>
+
+    <%= f.label :address_number %>
+    <%= f.text_field :address_number %>
+
+    <%= f.label :address_street %>
+    <%= f.text_field :address_street %>
+
+    <%= f.label :address_city %>
+    <%= f.text_field :address_city %>
+
+    <%= f.label :address_suburb %>
+    <%= f.text_field :address_suburb %>
+
+    <%= f.label :address_state %>
+    <%= f.text_field :address_state %>
+
+    <%= f.label :address_code %>
+    <%= f.text_field :address_code %>
+
+    <%= f.label :address_country %>
+    <%= f.text_field :address_country %>
+    
+    <%= f.label :sale_status %>
+    <%= check_box_tag :sale_status %>
+
+    <%= f.select :user_id, User.all.map {|user| [user.name, user.id]}, :include_blank => true, :prompt => "Select Property Owner..." %>
+
+    <%= f.submit %>
+<% end %>

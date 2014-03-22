@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <nav>
+        <ul>
+            <li><%= link_to('Home', root_path) %></li>
+            <li><%= link_to('Properties', properties_path) %></li>
+            <li><%= link_to('Add Property', new_property_path) %></li>
+            <li><%= link_to('Users', users_path) %></li>
+            <li><%= link_to('Add User', new_user_path) %></li>
+            <li><%= link_to('Arbitrators', arbitrators_path) %></li>
+            <li><%= link_to('Offer Arbitration', new_arbitrator_path) %></li>
+            <li><%= link_to('FAQ', new_arbitrator_path) %></li>
+        </ul>
+    </nav>
+    <div id="main-container">
+        <%= yield %>
+    </div>
 </body>
 </html>

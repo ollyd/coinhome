@@ -1,0 +1,14 @@
+<ul>
+    <li>Name: <%= @user.name %></li>
+    <li>Gender: <%= @user.gender.capitalize %></li>
+    <li>Age: <%= @user.age %></li>
+    <li>Email: <%= @user.email %></li>
+    <li>Address Number: <%= @user.address_number %></li>
+    <li>Street: <%= @user.address_street %></li>
+    <li>City: <%= @user.address_city %></li>
+    <li>State: <%= @user.address_state %></li>
+    <li>Code: <%= @user.address_code %></li>
+    <li>Country: <%= @user.address_country %></li>
+</ul>
+
+<p><%= link_to('Edit', edit_user_path(@user)) %> <%= link_to('Delete', @user, :method => :delete) %></p>

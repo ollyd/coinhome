@@ -1,2 +1,7 @@
-<h1>Arbitrators#show</h1>
-<p>Find me in app/views/arbitrators/show.html.erb</p>
+<ul>
+    <li>Name: <%= @arbitrator.name %></li>
+    <li>Profile: <%= @arbitrator.description %></li>
+    <li>Public Key: <%= @arbitrator.public_key %></li>
+</ul>
+
+<p><%= link_to('Edit', edit_arbitrator_path(@arbitrator)) %> <%= link_to('Delete', @arbitrator, :method => :delete) %></p>

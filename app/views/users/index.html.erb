@@ -1,0 +1,13 @@
+<h3>User Index</h3>
+
+<% @users.each do |user| %>
+    <ul>
+        <li>Name: <%= link_to(user.name, user) %></li>
+        <li>Email: <%= user.email %></li>
+    </ul>
+<% end %>
+
+<%# @users.properties.each do |property| %>
+    <%#= user.property %>
+<%# end %>
+
