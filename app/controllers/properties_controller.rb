@@ -1,6 +1,8 @@
 class PropertiesController < ApplicationController
   def index
     @properties = Property.all
+    api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
+    @last_traded_price = api['last']
   end
 
   def create

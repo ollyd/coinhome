@@ -31,6 +31,7 @@ class Property < ActiveRecord::Base
     :address_street, :address_suburb, :address_city, :address_state, :address_code, :address_country, :user_id
 
     belongs_to :user
+    has_many :photos
 
     # def bitcoin_price(price)
     #     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')

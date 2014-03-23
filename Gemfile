@@ -35,6 +35,8 @@ end
 gem 'haml'
 gem 'sextant'
 
+gem 'paperclip'
+
 gem 'bcrypt-ruby'
 
 gem 'httparty'

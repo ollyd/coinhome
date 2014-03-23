@@ -7,6 +7,7 @@
         <li><%= property.address_number %></li>
         <li><%= property.address_street %></li>
         <li><%= property.address_suburb %></li>
+        <li><%= number_with_precision(property.price/@last_traded_price, precision: 6) %></li>
         <li><%= number_to_currency(property.price) %></li>
         <li><%= property.bedrooms %></li>
         <li><%= property.bathrooms %></li>

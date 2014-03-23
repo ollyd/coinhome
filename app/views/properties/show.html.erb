@@ -16,6 +16,5 @@
     <p><%= link_to('Edit', edit_property_path(@property)) %> <%= link_to('Delete', @property, :method => :delete) %></p>
 
 <h3>Property Owner:</h3>
-<%# @property.users.each do |user| %>
-   <p><%= link_to(@property.user.name, user_path) %></p>
-<%# end %>
+
+   <p><%= link_to(@property.user.name, user_path(@property.user)) %></p>

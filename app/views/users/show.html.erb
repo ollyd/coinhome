@@ -12,3 +12,15 @@
 </ul>
 
 <p><%= link_to('Edit', edit_user_path(@user)) %> <%= link_to('Delete', @user, :method => :delete) %></p>
+
+<% @user.properties.each do |property| %>
+    <p>
+        <li>
+            Owned Properties: 
+            <%= link_to(property.address_number, property_path(property.id)) %>
+            <%= link_to(property.address_street, property_path(property.id)) %>
+            <%= link_to(property.address_suburb, property_path(property.id)) %>
+            <%= link_to(property.address_code, property_path(property.id)) %>
+        </li>
+    </p>
+<% end %>

@@ -31,4 +31,7 @@ class ArbitratorsController < ApplicationController
     arbitrator.destroy
     redirect_to arbitrators_path
   end
+
+  def faq
+  end
 end
