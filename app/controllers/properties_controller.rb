@@ -1,6 +1,12 @@
 class PropertiesController < ApplicationController
+  has_scope :by_bedrooms
+  has_scope :by_bathrooms
+  has_scope :by_style
+  has_scope :by_garages
+  has_scope :by_price, :using => [:started_at, :ended_at], :type => :hash
+
   def index
-    @properties = Property.all
+    @properties = apply_scopes(Property).all
     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
     @last_traded_price = api['last']
   end

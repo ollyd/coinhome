@@ -30,12 +30,12 @@ class Property < ActiveRecord::Base
     :description, :map_image, :map_link, :sale_status, :date_listed, :address_number, 
     :address_street, :address_suburb, :address_city, :address_state, :address_code, :address_country, :user_id
 
+    scope :by_style, -> style { where(:style => style) }
+    scope :by_garages, -> garages { where(:garages => garages) }
+    scope :by_bedrooms, -> bedrooms { where(:bedrooms => bedrooms) }
+    scope :by_bathrooms, -> bathrooms { where(:bathrooms => bathrooms) }
+    scope :by_price, -> started_at, ended_at { where("started_at = ? AND ended_at = ?", started_at, ended_at) }
+
     belongs_to :user
     has_many :photos
-
-    # def bitcoin_price(price)
-    #     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
-    #     @last_traded_price = api['last']
-    #     price / @last_traded_price
-    # end
 end

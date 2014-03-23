@@ -35,6 +35,7 @@ end
 gem 'haml'
 gem 'sextant'
 
+gem 'has_scope'
 gem 'paperclip'
 
 gem 'bcrypt-ruby'

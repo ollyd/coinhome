@@ -63,6 +63,7 @@ GEM
     execjs (2.0.2)
     haml (4.0.5)
       tilt
+    has_scope (0.5.1)
     hike (1.2.3)
     httparty (0.13.0)
       json (~> 1.8)
@@ -167,6 +168,7 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 4.0.0)
   haml
+  has_scope
   httparty
   jbuilder (~> 1.2)
   jquery-rails
