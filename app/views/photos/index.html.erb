@@ -1,5 +1,10 @@
 <h3>Photo Albums</h3>
 
+<%# @photo.properties.each do |property| %>
+        <h3><%#= property.address_number%> <%#= property.address_street%>, 
+        <%#= property.address_suburb %>, <%#= property.address_code %></h3>
+<%# end %>
+
 <% @photos.each do |photo| %>
     <ul>
         <li><%= link_to(image_tag(photo.photo1), photo, :class => 'thumb') %></li>
@@ -12,3 +17,4 @@
         <li><%= link_to(image_tag(photo.photo8), photo, :class => 'thumb') %></li>
     </ul>
 <% end %>
+    

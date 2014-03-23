@@ -37,6 +37,8 @@ gem 'sextant'
 
 gem 'has_scope'
 gem 'paperclip'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
 
 gem 'bcrypt-ruby'
 
