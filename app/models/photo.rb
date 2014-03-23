@@ -3,15 +3,42 @@
 # Table name: photos
 #
 #  id          :integer          not null, primary key
-#  photo       :text
+#  photo1      :text
+#  photo2      :text
+#  photo3      :text
+#  photo4      :text
+#  photo5      :text
+#  photo6      :text
+#  photo7      :text
+#  photo8      :text
 #  property_id :integer
 #
 
 class Photo < ActiveRecord::Base
-    attr_accessible :photo, :property_id
-    validates_presence_of :photo 
-    has_attached_file :photo, :styles => 
-    { full: '2048x2048>',:medium => "300x300>", :thumb => "100x100>" }#, :default_url => "/images/:style/missing.png" - See more at: http://amgrade.com/blogs/thoughts/multiple-files-upload-rails#sthash.kRRJej9Z.dpuf
+    attr_accessible :property_id
+    has_attached_file :photo1, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo2, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo3, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo4, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo5, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo6, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo7, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
+
+    has_attached_file :photo8, :styles => 
+    { :medium => "600x400>", :thumb => "150x100>" }, :default_url => "/images/:style/missing.png" 
     
     belongs_to :property
 end

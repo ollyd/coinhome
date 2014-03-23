@@ -109,6 +109,7 @@ a3 = Arbitrator.create(:name => 'Case Team', :description => 'The Case arbitrati
     party within 2 weeks, we will rule in favor of the other party.', :email => 'case@gmail.com')
 
 u1.properties << p1
+u2.properties << p2
 u3.properties << p3
 
 u1.arbitrators << a1
