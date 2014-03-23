@@ -1,0 +1,14 @@
+<h3>Photo Albums</h3>
+
+<% @photos.each do |photo| %>
+    <ul>
+        <li><%= link_to(image_tag(photo.photo1), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo2), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo3), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo4), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo5), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo6), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo7), photo, :class => 'thumb') %></li>
+        <li><%= link_to(image_tag(photo.photo8), photo, :class => 'thumb') %></li>
+    </ul>
+<% end %>

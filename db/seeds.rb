@@ -108,8 +108,39 @@ a3 = Arbitrator.create(:name => 'Case Team', :description => 'The Case arbitrati
     PGP by email. We will learn and use any technology expected from our clients. If there is no response from a 
     party within 2 weeks, we will rule in favor of the other party.', :email => 'case@gmail.com')
 
+ph1 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/6da1b1af-25ed-4f7a-9c7e-2170451da61d/domain/20110341532pio05021247?mod=140323-182659',
+    :photo2 => 'http://i.domainstatic.com.au/a11599d2-fa01-42a8-bc60-2474031fa5f9/domain/20110341534pio05021248?mod=140323-182659',
+    :photo3 => 'http://i.domainstatic.com.au/df1e0eeb-430e-48ba-8172-aa6524b35b60/domain/20110341535pio05021248?mod=140323-182659',
+    :photo4 => 'http://i.domainstatic.com.au/6de3c9a4-b69d-4991-bfbd-382855371629/domain/20110341536pio05021248?mod=140323-182659',
+    :photo5 => 'http://i.domainstatic.com.au/47a2ed55-2e6d-4a5d-ba75-2387ad4419a3/domain/20110341537pio05021248?mod=140323-182659',
+    :photo6 => 'http://i.domainstatic.com.au/2975915e-75cc-441a-ab69-46554850f5ac/domain/20110341538pio05021248?mod=140323-182659',
+    :photo7 => 'http://i.domainstatic.com.au/4c55f892-4529-4c83-adef-f6be25897d66/domain/20110341539pio05021249?mod=140323-182659',
+    :photo8 => 'http://i.domainstatic.com.au/26028b66-dadb-4aac-ac41-fe98c642a337/domain/201103415311pio05021249?mod=140323-182659')
+
+ph2 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/65a5a208-edb8-4bb4-a4a4-18cf073837e5/domain/20106308691pio07165643',
+    :photo2 => 'http://i.domainstatic.com.au/8fb6f73b-14ff-4b43-acbb-711e32d62876/domain/20106308692pio07165643',
+    :photo3 => 'http://i.domainstatic.com.au/18a18f14-2184-45dd-84ad-304e8c6d57c3/domain/20106308693pio07165644',
+    :photo4 => 'http://i.domainstatic.com.au/8ce86ce0-e9ce-42c6-93d1-5d3631ac2ac7/domain/20106308694pio07165645',
+    :photo5 => 'http://i.domainstatic.com.au/2a718aec-d49c-4544-a894-16ba81e45059/domain/20106308695pio07165646',
+    :photo6 => 'http://i.domainstatic.com.au/f46f0aa1-9538-4db1-8123-4606be416766/domain/20106308696pio07165647',
+    :photo7 => 'http://i.domainstatic.com.au/62783c52-c26e-442b-bba6-ef5820eeb3cb/domain/20106308697pio07165650',
+    :photo8 => 'http://i.domainstatic.com.au/4bf6a0fb-1423-4f14-8d8c-160d810a964e/domain/20106308698pio14164557')
+
+ph3 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/8380a97b-d78b-40ee-b2e5-e3b3d63ea283/domain/20109622601pio26193648',
+    :photo2 => 'http://i.domainstatic.com.au/4a8b3ffb-fb64-4151-a7c9-873e40243b3a/domain/20109622602pio31021803',
+    :photo3 => 'http://i.domainstatic.com.au/58f198c2-34b9-4adb-aa3e-2c221b30e524/domain/20109622603pio31021804',
+    :photo4 => 'http://i.domainstatic.com.au/822031fc-6600-4608-b11f-4886367b14e2/domain/20109622604pio31021804',
+    :photo5 => 'http://i.domainstatic.com.au/3a42a8bf-58d9-47c7-a52a-5335ce4d2d79/domain/20109622605pio31021805',
+    :photo6 => 'http://i.domainstatic.com.au/f24049f0-35cb-4460-bfbf-77104777b586/domain/20109622606pio31021805',
+    :photo7 => 'http://i.domainstatic.com.au/dfb90c00-365e-41eb-a290-99ae2bd2eaa7/domain/20109622607pio31021806',
+    :photo8 => 'http://i.domainstatic.com.au/95c88a8c-3d2c-4cb8-8ca6-67468736b8a1/domain/20109622608pio31021806')
+
 u1.properties << p1
 u2.properties << p2
 u3.properties << p3
 
 u1.arbitrators << a1
+
+p2.photos << ph1
+p3.photos << ph2 
+p1.photos << ph3

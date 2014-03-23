@@ -1,0 +1,42 @@
+<%= form_for @photo, :url => photos_path, :html => { :multipart => true } do |f| %>
+    <li>
+        <%= f.label :photo1 %>
+        <%= f.url_field :photo1 %>
+    </li>
+
+    <li>
+        <%= f.label :photo2 %>
+        <%= f.url_field :photo2 %>
+    </li>
+
+    <li>
+        <%= f.label :photo3 %>
+        <%= f.url_field :photo3 %>
+    </li>
+
+    <li>
+        <%= f.label :photo4 %>
+        <%= f.url_field :photo4 %>
+    </li>
+
+    <li>
+        <%= f.label :photo5 %>
+        <%= f.url_field :photo5 %>
+    </li>
+
+    <li>
+        <%= f.label :photo6 %>
+        <%= f.url_field :photo6 %>
+    </li>
+
+    <li>
+        <%= f.label :photo7 %>
+        <%= f.url_field :photo7 %>
+    </li>
+
+    <li>
+        <%= f.label :photo8 %>
+        <%= f.url_field :photo8 %>
+    </li>
+    <%= f.submit %>
+<% end %>
