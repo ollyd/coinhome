@@ -1,11 +1,11 @@
 <h3>Photo Albums</h3>
 
-<%# @photo.properties.each do |property| %>
-        <h3><%#= property.address_number%> <%#= property.address_street%>, 
-        <%#= property.address_suburb %>, <%#= property.address_code %></h3>
-<%# end %>
+<%#= photo.property.address_number %> <%#= property.address_street%>, 
+        <%#= property.address_suburb %>, <%#= property.address_code %>
+
 
 <% @photos.each do |photo| %>
+    <p>Property ID: <%= link_to(photo.property_id, property_path(photo.property_id)) %></p>
     <ul>
         <li><%= link_to(image_tag(photo.photo1), photo, :class => 'thumb') %></li>
         <li><%= link_to(image_tag(photo.photo2), photo, :class => 'thumb') %></li>

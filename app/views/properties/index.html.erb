@@ -1,5 +1,65 @@
 <h3>Current Properties</h3>
 
+ <section class="wrapper-xs bg-highlight">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form action="" class="form-inline">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="">Search:</label>
+                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                                        <optgroup label="Personal:">
+                                            <option><%#= Property.all.map { |p| p.style } %>
+                                            </option>
+                                        </optgroup>
+                                    </select>
+                                </div><!-- /.col -->
+                                <div class="col-md-2">
+                                    <label for="">Bedrooms:</label>
+                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                                        <optgroup label="Bedrooms:">
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8+</option>
+                                        </optgroup>
+                                    </select>
+                                </div><!-- /.col -->
+                                 <div class="col-md-3">
+                                    <label for="">Suburb:</label>
+                                    <select class="form-control selectpicker show-tick" title='Choose One' data-live-search="true" data-style="btn-primary">
+                                        <optgroup label="Suburb:">
+                                            <option><%#= Property.all.map { |p| p.address_suburb }.flatten %>
+                                            </option>
+                                        </optgroup>
+                                    </select> 
+                                </div><!-- /.col -->
+                                <div class="col-md-2">
+                                    <label for="">Price:</label>
+                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                                        <optgroup label="Price:">
+                                            <option>Max 2500 BTC</option>
+                                            <option>Max 3500 BTC</option>
+                                            <option>Max 4500 BTC</option>
+                                            <option> 4500+ BTC</option>
+                                        </optgroup>
+                                    </select> 
+                                     </div><!-- /.col -->
+                                      <div class="col-md-2">
+                                    <label for="">Ready?</label>
+                                    <button class="btn btn-primary btn-block">Search</button>
+                                </div>
+                            </div> 
+                        </form> 
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+    </nav><!-- /.navbar --> 
+
+
 <% @properties.each do |property| %>
     <ul>
         <li><%= link_to(image_tag(property.image)) %></li>
@@ -8,7 +68,7 @@
         <li><%= property.address_street %></li>
         <li><%= property.address_suburb %></li>
         <li><%= number_with_precision(property.price/@last_traded_price, precision: 6) %></li>
-        <li><%= number_to_currency(property.price) %></li>
+        <li><%= number_to_currency(property.price, strip_insignificant_zeros: true) %></li>
         <li><%= property.bedrooms %></li>
         <li><%= property.bathrooms %></li>
         <li><%= property.sale_status %></li>

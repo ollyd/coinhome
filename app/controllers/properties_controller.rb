@@ -13,7 +13,7 @@ class PropertiesController < ApplicationController
 
   def create
     property = Property.create params[:property]
-    redirect_to property
+    redirect_to new_photo_path(:property_id => property.id)
   end
 
   def new
