@@ -40,6 +40,8 @@ gem 'paperclip'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 
+gem 'bootstrap-sass'
+
 gem 'bcrypt-ruby'
 
 gem 'httparty'

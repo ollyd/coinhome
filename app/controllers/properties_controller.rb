@@ -32,6 +32,15 @@ class PropertiesController < ApplicationController
     
   end
 
+  def search
+    api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
+    @last_traded_price = api['last']
+    v1 = Property.where(:bedrooms => params[:bedrooms])
+    v2 = Property.where(:bathrooms => params[:bathrooms])
+    v3 = v1.where(:address_suburb => params[:address_suburb])
+    @v4 = v2.where(:price => params[:price].to_i)
+  end
+
   def update
     property = Property.find params[:id]
     property.update_attributes(params[:property])

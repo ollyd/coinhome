@@ -20,8 +20,11 @@
 class User < ActiveRecord::Base
     attr_accessible :name, :gender, :age, :address_number, 
     :address_street, :address_city, :address_state, :address_code, :address_country,
-    :email 
+    :email, :password, :password_confirmation 
 
     has_and_belongs_to_many :arbitrators
     has_many :properties
+
+    has_secure_password
+    validates :name, :presence => true, :uniqueness => true, :length => { :minimum => 4 }
 end

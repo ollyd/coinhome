@@ -1,0 +1,15 @@
+<% @v4.each do |property| %>
+    <ul>
+        <li><%= link_to(image_tag(property.image)) %></li>
+        <li>Date Listed: <%= property.date_listed %></li>
+        <li><%= property.address_number %></li>
+        <li><%= property.address_street %></li>
+        <li><%= property.address_suburb %></li>
+        <li><%= number_with_precision(property.price/@last_traded_price, precision: 6) %></li>
+        <li><%= number_to_currency(property.price, strip_insignificant_zeros: true) %></li>
+        <li><%= property.bedrooms %></li>
+        <li><%= property.bathrooms %></li>
+        <li><%= property.sale_status %></li>
+        <li><%= truncate(property.description, length: 200) { link_to "More Details", property } %></li>
+    </ul>
+<% end %>

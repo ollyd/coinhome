@@ -1,78 +1,144 @@
-<h3>Current Properties</h3>
-
- <section class="wrapper-xs bg-highlight">
+   
+        <section class="wrapper-lg bg-custom-home">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
+                        <div class="widget padding-lg bg-dark">
+                        <h1 class="heading-md text-center text-light">Filter Properties, or Scroll Down to See All</h1>
+                       <!--  #<br class="spacer-lg"> -->
                         <form action="" class="form-inline">
                             <div class="row">
-                                <div class="col-md-3">
-                                    <label for="">Search:</label>
-                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
-                                        <optgroup label="Personal:">
-                                            <option><%#= Property.all.map { |p| p.style } %>
-                                            </option>
-                                        </optgroup>
-                                    </select>
-                                </div><!-- /.col -->
-                                <div class="col-md-2">
-                                    <label for="">Bedrooms:</label>
-                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
-                                        <optgroup label="Bedrooms:">
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8+</option>
-                                        </optgroup>
-                                    </select>
-                                </div><!-- /.col -->
-                                 <div class="col-md-3">
-                                    <label for="">Suburb:</label>
-                                    <select class="form-control selectpicker show-tick" title='Choose One' data-live-search="true" data-style="btn-primary">
-                                        <optgroup label="Suburb:">
-                                            <option><%#= Property.all.map { |p| p.address_suburb }.flatten %>
-                                            </option>
-                                        </optgroup>
-                                    </select> 
-                                </div><!-- /.col -->
-                                <div class="col-md-2">
-                                    <label for="">Price:</label>
-                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
-                                        <optgroup label="Price:">
-                                            <option>Max 2500 BTC</option>
-                                            <option>Max 3500 BTC</option>
-                                            <option>Max 4500 BTC</option>
-                                            <option> 4500+ BTC</option>
-                                        </optgroup>
-                                    </select> 
-                                     </div><!-- /.col -->
-                                      <div class="col-md-2">
-                                    <label for="">Ready?</label>
-                                    <button class="btn btn-primary btn-block">Search</button>
-                                </div>
-                            </div> 
-                        </form> 
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section>
-    </nav><!-- /.navbar --> 
+                                <form action="/search" method='post'>
+                                    <div class="col-md-2">
+                                        <label for="">Price:</label>
+                                            <select name="price" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
+                                                <option value= 1_000_000 >Max. 1,750 BTC</option>
+                                                <option value= 2_000_000 >Max. 3,250 BTC</option>
+                                                <option value= 3_000_000 >Max. 4,750 BTC</option>
+                                                <option value= 4_000_000 > 4750+ BTC</option>
+                                            </select> 
+                                    </div><!-- /.col -->
 
+                                    <div class="col-md-2"> 
+                                        <label for="">Suburb:</label>
+                                            <select name="address_suburb" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
+                                                <%= Property.all.each do |p| %> 
+                                                    <option value=<%= p.address_suburb %>> 
+                                                        <%=p.address_suburb %> 
+                                                    </option>
+                                                <% end %>
+                                            </select> 
+                                    </div><!-- /.col -->    
+                                    
+                                    <div class="col-md-2">
+                                        <label for="">Bedrooms:</label>
+                                            <select name="bedrooms" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">  
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8+</option>    
+                                            </select>
+                                    </div><!-- /.col -->
 
-<% @properties.each do |property| %>
-    <ul>
-        <li><%= link_to(image_tag(property.image)) %></li>
-        <li>Date Listed: <%= property.date_listed %></li>
-        <li><%= property.address_number %></li>
-        <li><%= property.address_street %></li>
-        <li><%= property.address_suburb %></li>
-        <li><%= number_with_precision(property.price/@last_traded_price, precision: 6) %></li>
-        <li><%= number_to_currency(property.price, strip_insignificant_zeros: true) %></li>
-        <li><%= property.bedrooms %></li>
-        <li><%= property.bathrooms %></li>
-        <li><%= property.sale_status %></li>
-        <li><%= truncate(property.description, length: 200) { link_to "More Details", property } %></li>
-    </ul>
-<% end %>
+                                    <div class="col-md-2">
+                                        <label for="">Bathrooms:</label>
+                                            <select name="bathrooms" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">  
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>   
+                                            </select>
+                                    </div><!-- /.col -->
+                                    
+                                    <div class="col-md-2">
+                                        <label>Garages:</label>
+                                            <select name="garages" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select> 
+                                    </div><!-- /.col -->
+                                        <div class="col-md-2">   
+                                        <label>Go...</label> 
+                                        <button class="btn btn-primary btn-block">Search</button>
+                                    </div>
+                                </form> 
+                            </div><!-- /.widget -->    
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+                
+    <section class="wrapper-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>the first <span class="text-muted">bitcoin real estate</span> website</h2>
+                    <p class="lead">For the first time, there's a resource for purchasing homes exclusively with Bitcoin. We also provide an arbitration marketplace for enhanced transaction security.</p>
+                    <p><a href="/pages/faq" class="btn btn-lg btn-primary">Learn More »</a></p>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section class="wrapper-md bg-highlight">
+        <div class="container">
+            <div class="widget padding-md bg-dark">
+                <h1 class="text-center text-light">Current Properties</h1>
+            </div>
+            <div class="row">
+                <% @properties.each do |property| %>
+                <div class="col-sm-6 col-md-3">    
+                    <div class="thumbnail">
+                        <div class="overlay-container">
+                            <%= image_tag property.photos[0].photo1, :class => "index-thumb" %>
+                            <div class="overlay-content">
+                                <h3 class="h4 headline"><%= property.address_suburb %></h3>
+                                <p><%= truncate(property.description, length: 100) %></p>
+                            </div><!-- /.overlay-content -->
+                        </div><!-- /.overlay-container -->
+                        <div class="thumbnail-meta">
+                            <p></i><%= property.address_number %> <%= property.address_street %></p>
+                            <p><%= property.address_suburb %>, <%= property.address_state %> <%= property.address_code %></p>
+                        </div>
+                        <div class="thumbnail-meta">
+                            <%= property.sqr_ft %> SqFt  |  <%= property.bedrooms %> Bed  |  <%= property.bathrooms %> Bath  |  <%= property.garages %> Garage
+                        </div>
+                        <div class="thumbnail-meta">
+                            <span class="h3">BTC <%= number_with_precision(property.price/@last_traded_price, precision: 2) %></span> <%= link_to "More Details", property, :class => "btn btn-link pull-right" %> 
+                        </div>    
+                    </div><!-- /.thumbnail -->      
+                </div><!-- /.col -->
+                <% end %>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>    
+
+    <section class="wrapper-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 text-center">
+                    <div class="widget padding-md bg-primary">
+                        <h2>Listing</h2>
+                        <p class="lead">Please register if you would like to list a property on CoinHome. </p>
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <div class="widget padding-md bg-info">
+                        <h2>Arbitrage</h2>
+                        <p class="lead">Visit 'Offer Arbritration' to offer arbitration services. </p>
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <div class="widget padding-md bg-primary">
+                        <h2>Buyers</h2>
+                        <p class="lead">Please register to keep up to date with our latest properties. </p>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
 
