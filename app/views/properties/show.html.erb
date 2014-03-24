@@ -1,20 +1,135 @@
-<h3><%= @property.address_number%> <%=@property.address_street%>, <%=@property.address_suburb %></h3>
-    <ul>
-        <li><%= image_tag @property.image %></li>
-        <li>Date Listed: <%= @property.date_listed %></li>
-        <li>AUD Price: <%= number_to_currency(@property.price, strip_insignificant_zeros: true) %></li>
-        <li>BTC Price: <%= number_with_precision(@property.price/@last_traded_price, precision: 6) %></li>
-        <li>Bedroom: <%= @property.bedrooms %></li>
-        <li>Bathrooms: <%= @property.bathrooms %></li>
-        <li>Garages: <%= @property.garages %></li>
-        <li>Size: <%= @property.sqr_ft %></li>
-        <li><%= @property.description %></li>
-    </ul>
+    <section class="wrapper-md bg">
+        <div class="container">
+            <div class="row">
+                <!-- Main -->
+                <div class="col-sm-12 col-md-8">
+                    <article class="post">
+                        <h2><%= @property.address_number%> <%=@property.address_street%>, <span class="text-muted"><%=@property.address_suburb %> <%=@property.address_state %>, <%=@property.address_code %></span></h2>
+                        
+                        <hr>
 
-    <iframe src=<%= @property.map_image %> width="600" height="450" frameborder="0" style="border:0"></iframe>
+                        <!-- Carousel -->
+                        <div id="my-carousel" class="carousel slide">
+                            <!-- indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#my-carousel" data-slide-to="1"></li>
+                                <li data-target="#my-carousel" data-slide-to="2"></li>
+                                <li data-target="#my-carousel" data-slide-to="3"></li>
+                                <li data-target="#my-carousel" data-slide-to="4"></li>
+                            </ol>
+                            <!-- carousel -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <%= image_tag @property.photos[0].photo1, :class => "img-responsive" %>
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <%= image_tag @property.photos[0].photo2, :class => "img-responsive" %>
+                                </div>    
+                                <div class="item">
+                                    <%= image_tag @property.photos[0].photo3, :class => "img-responsive" %>
+                                </div>  
+                                <div class="item">
+                                    <%= image_tag @property.photos[0].photo4, :class => "img-responsive" %>
+                                </div>  
+                                <div class="item">
+                                    <%= image_tag @property.photos[0].photo5, :class => "img-responsive" %>
+                                </div>    
+                            </div><!-- /.carousel-inner -->
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#my-carousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#my-carousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div><!-- /.carousel -->
 
-    <p><%= link_to('Edit', edit_property_path(@property)) %> <%= link_to('Delete', @property, :method => :delete) %></p>
+                        <hr>
 
-<h3>Property Owner:</h3>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="widget padding-md bg-secondary">
+                                    <h3 class="headline">Features:</h3>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Property:</strong> <%= @property.sqr_ft %> Ft<sup>2</sup></li>
+                                        <li><strong>Date Listed:</strong> <%= @property.date_listed %></li>
+                                        <li><strong>Bedrooms:</strong><%= @property.bedrooms %></li>
+                                        <li><strong>Bathrooms:</strong><%= @property.bathrooms %></li>
+                                        <li><strong>Garage:</strong> <%= @property.garages %></li>
+                                        <li><strong>Price: </strong><%= number_with_precision(@property.price/@last_traded_price, precision: 6) %> BTC</li>
+                                        <li><strong>(In AUD: </strong><%= number_to_currency(@property.price, strip_insignificant_zeros: true) %>)</li>
+                                    </ul>
+                                </div><!-- /.widget -->
+                            </div><!-- /.col -->
 
-   <p><%= link_to(@property.user.name, user_path(@property.user)) %></p>
+                            <div class="col-sm-12 col-md-7">
+                                <div class="panel panel-secondary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Description</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><%= @property.description %></p>
+                                    </div><!-- /.panel-body -->
+                                </div><!-- /.panel -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                        
+                        <div class="panel panel-secondary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Map location</h3>
+                            </div><!-- /.panel-heading -->
+                            <div class="panel-body padding-md">
+                                <div class="embed-wrapper">
+                                    <iframe src=<%= @property.map_image %> width="600" height="450" frameborder="0" style="border:0"></iframe>
+                                </div>
+                            </div><!-- /.panel-body -->
+                        </div><!-- /.panel -->
+                    
+                        <hr>
+
+                        <div class="panel panel-secondary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Questions About This Property?</h3>
+                            </div>
+                            <div class="panel-body padding-md">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <h3>Contact Us</h3>
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="exmaple-contact-email">Email address</label>
+                                                <input type="email" class="form-control" id="exmaple-contact-email" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-contact-name">Name</label>
+                                                <input type="text" class="form-control" id="example-contact-name" placeholder="Your name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-contact-message">Message</label>
+                                                <textarea id="example-contact-message" class="form-control" rows="5"></textarea>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Send me a copy
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send Message</button>
+                                        </form>
+                                    </div><!-- /.col -->
+                                </div><!-- /.row -->
+                            </div><!-- /.panel-body -->
+                        </div><!-- /.panel -->
+                        
+                        <hr>
+                        <h3>Property Owner:</h3>
+                        <p><%= link_to(@property.user.name, user_path(@property.user)) %></p>
+                        <p><%= link_to('Edit', edit_property_path(@property)) %> <%= link_to('Delete', @property, :method => :delete) %></p>
+                    </article><!-- /.post -->
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>    
+
+
+

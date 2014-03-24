@@ -135,6 +135,86 @@ ph3 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/8380a97b-d78b-40ee-b
     :photo7 => 'http://i.domainstatic.com.au/dfb90c00-365e-41eb-a290-99ae2bd2eaa7/domain/20109622607pio31021806',
     :photo8 => 'http://i.domainstatic.com.au/95c88a8c-3d2c-4cb8-8ca6-67468736b8a1/domain/20109622608pio31021806')
 
+ph4 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/b67a4c22-f5b6-434c-b713-2cfe75a75716/domain/20110776331pio24144901?mod=140324-144946',
+    :photo2 => 'http://i.domainstatic.com.au/6342417f-dda9-4c5c-89d5-725adc81738b/domain/20110776332pio24144902?mod=140324-144946',
+    :photo3 => 'http://i.domainstatic.com.au/98cac502-4748-419d-8b57-591aaab6f567/domain/20110776333pio24144903?mod=140324-144946',
+    :photo4 => 'http://i.domainstatic.com.au/92b024f8-ef97-44ef-a9c3-65366a4ffc72/domain/20110776334pio24120042?mod=140324-144946',
+    :photo5 => 'http://i.domainstatic.com.au/b14f75d5-1e44-432f-b5c9-0dc9d8e1c196/domain/201107763316pio24120507?mod=140324-144946',
+    :photo6 => 'http://i.domainstatic.com.au/2029c794-8a42-4631-a767-118d16aee28f/domain/201107763319pio24120509?mod=140324-144946',)
+
+ph5 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph6 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph7 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph8 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph9 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph10 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph11 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+ph12 = Photo.create(:photo1 => '',
+    :photo2 => '',
+    :photo3 => '',
+    :photo4 => '',
+    :photo5 => '',
+    :photo6 => '',
+    :photo7 => '',
+    :photo8 => '')
+
+
 u1.properties << p1
 u2.properties << p2
 u3.properties << p3

@@ -1,45 +1,72 @@
-<% if @user.errors.any? %>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-<% end %>
+<section class="wrapper-md">
+    <div class="container">
+        <div class="row">
+            <h3 class="text-info">Create an account</h3>
+            <div class="col-sm-6 col-md-4 col-md-offset-1">
+                <form role="form">
+                    <%= form_for @user do |f| %>
+                    <div class="form-group">
+                        <%= f.label :name %>
+                        <%= f.text_field :name, :class => "form-control", :placeholder => "Full Name" %> 
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :email, 'Email address' %>
+                        <%= f.text_field :email, :class => "form-control", :placeholder => "Enter email" %> 
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :age %>
+                        <%= f.text_field :age, :class => "form-control", :placeholder => "Your age" %> 
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :gender %>
+                        <%= f.text_field :gender, :class => "form-control", :placeholder => "Male/Female" %> 
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :password %>
+                        <%= f.text_field :password, :class => "form-control", :placeholder => "Choose password" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :password_confirmation %>
+                        <%= f.text_field :password_confirmation, :class => "form-control", :placeholder => "Confirm password" %>
+                    </div>
+                </div>
 
-<%= form_for @user do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+                <div class="col-sm-6 col-md-4 col-md-offset-1">        
+                    <div class="form-group">
+                        <%= f.label :address_number, 'Address: Flat/House No.' %>
+                        <%= f.text_field :address_number, :class => "form-control", :placeholder => "Street number" %> 
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_street, 'Address: Street' %>
+                        <%= f.text_field :address_street, :class => "form-control", :placeholder => "Street name" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_city, 'Address: City' %>
+                        <%= f.text_field :address_city, :class => "form-control", :placeholder => "City" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_state, 'Address: State' %>
+                        <%= f.text_field :address_state, :class => "form-control", :placeholder => "State" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_code, 'Address: Post Code' %>
+                        <%= f.text_field :address_code, :class => "form-control", :placeholder => "Post code" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_country, 'Address: Country' %>
+                        <%= f.text_field :address_country, :class => "form-control", :placeholder => "Country" %>
+                    </div>
+                    <%= f.submit :class => "btn btn-info" %>
+                    <% end %>
+                </form>
 
-    <%= f.label :gender %>
-    <%= f.text_field :gender %>
+                <% if @user.errors.any? %>
+                    <% @user.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                <% end %>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
 
-    <%= f.label :age %>
-    <%= f.text_field :age %>
-
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-
-    <%= f.label :address_number %>
-    <%= f.text_field :address_number %>
-
-    <%= f.label :address_street %>
-    <%= f.text_field :address_street %>
-
-    <%= f.label :address_city %>
-    <%= f.text_field :address_city %>
-
-    <%= f.label :address_state %>
-    <%= f.text_field :address_state %>
-
-    <%= f.label :address_code %>
-    <%= f.text_field :address_code %>
-
-    <%= f.label :address_country %>
-    <%= f.text_field :address_country %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit %>
-<% end %>
