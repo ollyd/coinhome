@@ -1,16 +1,24 @@
-<h1>Images for Property:</h1>
-
-    <h3><%= @photo.property.address_number%> <%= @photo.property.address_street%>, 
-        <%= @photo.property.address_suburb %>, <%= @photo.property.address_code %></h3>
-
-    <li><%= image_tag @photo.photo1, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo2, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo3, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo4, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo5, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo6, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo7, :class => 'medium' %></li>
-    <li><%= image_tag @photo.photo8, :class => 'medium' %></li>
-
-<p><%= link_to('Edit', edit_photo_path(@photo)) %> <%= link_to('Delete', @photo, :method => :delete) %></p>
-    
+<section class="wrapper-lg bg-highlight">
+    <div class="container">
+        <h1>Full Size Images for Property:</h1>
+            <br class="spacer-lg">
+            <h3><%= @photo.property.address_number%> <%= @photo.property.address_street%>, 
+                <%= @photo.property.address_suburb %>, <%= @photo.property.address_code %></h3>
+                <hr>
+                <%= image_tag @photo.photo1 %>
+                <hr>
+                <%= image_tag @photo.photo2 %>
+                <hr>
+                <%= image_tag @photo.photo3 %>
+                <hr>
+                <%= image_tag @photo.photo4 %>
+                <hr>
+                <%= image_tag @photo.photo5 %>
+                <hr>
+                <%= image_tag @photo.photo6 %>
+                <hr>
+        <% if @current_user && @current_user.admin %>
+        <p><%= link_to('Edit', edit_photo_path(@photo)) %> <%= link_to('Delete', @photo, :method => :delete) %></p>
+        <% end %>
+    </div><!-- /.container -->
+</section>

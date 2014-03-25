@@ -1,13 +1,16 @@
-<h3>User Index</h3>
+<section class="wrapper-lg bg-highlight">
+    <div class="container">
+        <h1>User Index</h1>
+        <br class="spacer-lg">
+        <% @users.each do |user| %>
+            <ul>
+                Name: <%= link_to(user.name, user) %>
+                <br>
+                Email: <%= user.email %>
+            </ul>
+            <hr>
+        <% end %>
+    </div><!-- /.container -->
+</section>
 
-<% @users.each do |user| %>
-    <ul>
-        <li>Name: <%= link_to(user.name, user) %></li>
-        <li>Email: <%= user.email %></li>
-    </ul>
-<% end %>
-
-<%# @users.properties.each do |property| %>
-    <%#= user.property %>
-<%# end %>
 
