@@ -13,7 +13,7 @@
  *= require_tree .
  */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
-@import 'bootstrap.css'
+/*@import 'bootstrap.css'*/
 
 @font-face {
     font-family: 'icomoon';
