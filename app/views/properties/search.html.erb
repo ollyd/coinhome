@@ -1,15 +1,33 @@
-<% @v4.each do |property| %>
-    <ul>
-        <li><%= link_to(image_tag(property.image)) %></li>
-        <li>Date Listed: <%= property.date_listed %></li>
-        <li><%= property.address_number %></li>
-        <li><%= property.address_street %></li>
-        <li><%= property.address_suburb %></li>
-        <li><%= number_with_precision(property.price/@last_traded_price, precision: 6) %></li>
-        <li><%= number_to_currency(property.price, strip_insignificant_zeros: true) %></li>
-        <li><%= property.bedrooms %></li>
-        <li><%= property.bathrooms %></li>
-        <li><%= property.sale_status %></li>
-        <li><%= truncate(property.description, length: 200) { link_to "More Details", property } %></li>
-    </ul>
-<% end %>
+<section class="wrapper-md bg-highlight">
+    <div class="container">
+        <div class="widget padding-md bg-secondary">
+            <h1 class="text-center text-light">Current Properties</h1>
+        </div>
+        <div class="row">
+            <% @v5.each do |property| %>
+            <div class="col-sm-6 col-md-3">    
+                <div class="thumbnail">
+                    <div class="overlay-container">
+                        <%= image_tag property.photos[0].photo1, :class => "index-thumb" %>
+                        <div class="overlay-content">
+                            <h3 class="h4 headline"><%= property.address_suburb %></h3>
+                            <p><%= truncate(property.description, length: 100) %></p>
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.overlay-container -->
+                    <div class="thumbnail-meta">
+                        <p></i><%= property.address_number %> <%= property.address_street %></p>
+                        <p><%= property.address_suburb %>, <%= property.address_state %> <%= property.address_code %></p>
+                    </div>
+                    <div class="thumbnail-meta">
+                        <%= property.sqr_ft %> m<sup>2</sup>  |  <%= property.bedrooms %> Bed  |  <%= property.bathrooms %> Bath  |  <%= property.garages %> Garage
+                    </div>
+                    <div class="thumbnail-meta">
+                        <span class="h3">BTC <%= number_with_precision(property.price/@last_traded_price, precision: 2) %></span> <%= link_to "More Details", property, :class => "btn btn-link pull-right" %> 
+                    </div>    
+                </div><!-- /.thumbnail -->      
+            </div><!-- /.col -->
+            <% end %>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>    

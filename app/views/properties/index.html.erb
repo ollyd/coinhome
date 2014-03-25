@@ -106,7 +106,7 @@
                             <p><%= property.address_suburb %>, <%= property.address_state %> <%= property.address_code %></p>
                         </div>
                         <div class="thumbnail-meta">
-                            <%= property.sqr_ft %> SqFt  |  <%= property.bedrooms %> Bed  |  <%= property.bathrooms %> Bath  |  <%= property.garages %> Garage
+                            <%= property.sqr_ft %> m<sup>2</sup>  |  <%= property.bedrooms %> Bed  |  <%= property.bathrooms %> Bath  |  <%= property.garages %> Garage
                         </div>
                         <div class="thumbnail-meta">
                             <span class="h3">BTC <%= number_with_precision(property.price/@last_traded_price, precision: 2) %></span> <%= link_to "More Details", property, :class => "btn btn-link pull-right" %> 

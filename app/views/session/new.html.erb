@@ -1,0 +1,24 @@
+<section class="wrapper-lg bg-highlight">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3">
+                <h1>Sign Up</h1>
+                <hr>
+                <form role="form">  
+                    <%= form_tag "/login" do %>
+                    <div class="form-group">
+                        <%= label_tag :name %>
+                        <%= text_field_tag :name, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= label_tag :password %>
+                        <%= text_field_tag :password, :class => "form-control" %>
+                    </div>
+                    <%= submit_tag, :class => "btn btn-info" %>
+                    <% end %>
+                </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+

@@ -1,6 +1,7 @@
 RealestateApp::Application.routes.draw do
  
   root :to => 'properties#index'
+
   get 'pages/about' => "pages#about"
   get 'pages/contact' => "pages#contact"
   get 'pages/faq' => "pages#faq"
@@ -15,4 +16,10 @@ RealestateApp::Application.routes.draw do
   resources :properties
   resources :arbitrators
   resources :photos
+
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
+
+
 end
