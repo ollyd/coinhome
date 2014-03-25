@@ -236,7 +236,7 @@ a1 = Arbitrator.create(:name => 'Judge Aaron Davis', :description => '17 years o
     claims arbitration for the Utah State Courts. As a long-time bitcoin owner and believer in the future
     of the currency, I am happy to offer arbitration for Coin Home. I will use the legal jurisdiction 
     I am most familiar with, which is Utah State law. Fee structure varies on a case-by-case basis, 
-    with a maximum fee of 0.2 BTC.', :email => 'jadavis@gmail.com')
+    with a maximum fee of 0.2 BTC.', :email => 'jadavis@gmail.com', :image => 'http://dallas-photographers.info/wp-content/uploads/2010/01/dallas-headshot-men1.jpg')
 
 a2 = Arbitrator.create(:name => 'Manuel Araoz', :description => 'My name is Manuel Araoz, I am the developer 
     of http://www.proofofexistence.com/. I have also worked as a freelance programmer for the past year, and 
@@ -248,7 +248,7 @@ a2 = Arbitrator.create(:name => 'Manuel Araoz', :description => 'My name is Manu
     problems sub-contracting other programmers myself, so I know both sides of the equation. I offer simple 
     arbitration for bitcoin freelancing contracts. I will help you setup a payment schedule and terms, and, if 
     needed, resolve disputes regarding deliverables. Fees: none if no conflict arises, or 2% if it does (min. 10 mBTC)', 
-    :email => 'maraoz@proofofexistence.com')
+    :email => 'maraoz@proofofexistence.com', :image => 'http://www.asiancemagazine.com/files/active/0/200702ChrisHeadshot.jpg')
 
 a3 = Arbitrator.create(:name => 'Case Team', :description => 'The Case arbitration team will evaluate your dispute fairly, 
     professionally, and promptly. We have professional civil arbitration experience, which gives you the 
@@ -269,7 +269,14 @@ a3 = Arbitrator.create(:name => 'Case Team', :description => 'The Case arbitrati
     confidential and securely wipe the information from our computers upon the completion of the case.
     We are willing to communicate using any secure and anonymous communication method, with our preference being 
     PGP by email. We will learn and use any technology expected from our clients. If there is no response from a 
-    party within 2 weeks, we will rule in favor of the other party.', :email => 'case@gmail.com')
+    party within 2 weeks, we will rule in favor of the other party.', :email => 'case@gmail.com', :image => 'http://luskin.ucla.edu/sites/default/files/headshots/se2712mmLuskin0603.jpg?1352153511')
+
+a4 = Arbitrator.create(:name => 'Dave Sanderson', :description => 'Terms of service: Fees: 0.2% or 0.05 btc which ever is greatest, 
+    variable basedon transaction. Response time varies depending on means of contact, usually instant via Skype, under 
+    an hour by email. Arbitration agreements will be entered into via VoIP or email. Payment is 25% upfront remainder 
+    after transaction. All terms are agreed upon in arbitration agreement Arbitration of fiscal, physical and service 
+    based exchange. Dispute terms to be agreed upon in the arbitration agreement', 
+    :email => 'dsando@gmail.com', :image => 'http://djshawphotography.com/wp-content/uploads/2013/12/johnfeat.png')
 
 ph1 = Photo.create(:photo1 => 'http://i.domainstatic.com.au/6da1b1af-25ed-4f7a-9c7e-2170451da61d/domain/20110341532pio05021247?mod=140323-182659',
     :photo2 => 'http://i.domainstatic.com.au/a11599d2-fa01-42a8-bc60-2474031fa5f9/domain/20110341534pio05021248?mod=140323-182659',
