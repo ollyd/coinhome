@@ -7,8 +7,6 @@ class CreatePhotos < ActiveRecord::Migration
         t.text :photo4
         t.text :photo5
         t.text :photo6
-        t.text :photo7
-        t.text :photo8
         t.integer :property_id
     end
   end

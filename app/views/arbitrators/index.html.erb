@@ -1,8 +1,51 @@
-<h3>Browse Our Arbitrators</h3>
+<section class="wrapper-md">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Arbitrator Marketplace</h1>
+                <p class="lead">Browse arbitrator profiles below</p>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
 
-<% @arbitrators.each do |arbitrator| %>
-    <ul>
-        <li><%= arbitrator.name %></li>
-        <li><%= truncate(arbitrator.description, length: 200) { link_to "View Profile", arbitrator } %></li>
-    </ul>
-<% end %>
+<section class="wrapper-md bg-highlight">
+    <div class="container">
+        <div class="row">
+            <% @arbitrators.each do |arbitrator| %>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="overlay-container">
+                        <%= image_tag arbitrator.image %>
+                        <div class="overlay-content">
+                            <h3 class="h4 headline">Profile Summary</h3>
+                            <p><%= truncate(arbitrator.description, length: 100) %></p>
+                        </div><!-- /.overlay-content -->
+                    </div><!-- /.overlay-container -->
+                    <div class="thumbnail-meta">
+                        <p><%= arbitrator.name %></p>
+                    </div>
+                    <div class="thumbnail-meta">
+                        <p><%= arbitrator.public_key %></p>
+                    </div>
+                    <div class="thumbnail-meta">
+                        <%= link_to('View Profile', arbitrator, :class => "btn btn-lg btn-block btn-success") %>
+                    </div>
+                </div><!-- /.thumbnail -->
+            </div><!-- /.col -->
+            <% end %>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<section class="wrapper-md">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Any questions?</h2>
+                <%= link_to('Contact Us', pages_contact_path, :class => "btn btn-lg btn-info" )%>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
