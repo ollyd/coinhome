@@ -43,6 +43,7 @@ gem 'bcrypt-ruby'
 gem 'httparty'
 gem 'protected_attributes'
 gem 'rails_12factor'
+gem 'thread_safe', '0.2.0'
 
 group :development do
     gem 'pry-rails'
