@@ -1,8 +1,9 @@
 Property.destroy_all
 User.destroy_all
 Arbitrator.destroy_all
+Photo.destroy_all
 
-p1 = Property.create(:type => 'house', :price => 2000000, 
+p1 = Property.create(:style => 'house', :price => 2000000, 
     :sqr_ft => 850, :bedrooms => 6, :bathrooms => 4, :garages => 2,
     :description => 'This incredible house has it all. Across 4 levels there are 4 
     different lounge areas, a billiards table, a huge beautiful outdoor garden overlooking 
@@ -15,7 +16,7 @@ p1 = Property.create(:type => 'house', :price => 2000000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2088', 
     :address_country => 'Australia')
 
-p2 = Property.create(:type => 'house', :price => 2750000, 
+p2 = Property.create(:style => 'house', :price => 2750000, 
     :sqr_ft => 917, :bedrooms => 4, :bathrooms => 3, :garages => 2,
     :description => 'Nestled in a protected harbourside setting in a prestigious address, 
     this elegant waterfront residence has been impeccably maintained by one family for 
@@ -31,7 +32,7 @@ p2 = Property.create(:type => 'house', :price => 2750000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2030', 
     :address_country => 'Australia')
 
-p3 = Property.create(:type => 'house', :price => 4000000, 
+p3 = Property.create(:style => 'house', :price => 4000000, 
     :sqr_ft => 702, :bedrooms => 5, :bathrooms => 3, :garages => 3,
     :description => 'Architect Designed Luxury Home. Designed by Tanner Architects the architectural 
     expression is one of floating roof planes set over strong bases of stone, masonry and timber cladding, with 
@@ -51,7 +52,7 @@ p3 = Property.create(:type => 'house', :price => 4000000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2095', 
     :address_country => 'Australia')
 
-p4 = Property.create(:type => 'apartment', :price => 1200000, 
+p4 = Property.create(:style => 'apartment', :price => 1200000, 
     :sqr_ft => 270, :bedrooms => 3, :bathrooms => 2, :garages => 2,
     :description => 'Spectacular by day, stunning by night. This immaculately presented, north facing penthouse 
     apartment must be seen to be believed. Located in the most sought after, private corner position on Levels 13 
@@ -64,7 +65,7 @@ p4 = Property.create(:type => 'apartment', :price => 1200000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2017', 
     :address_country => 'Australia')
 
-p5 = Property.create(:type => 'house', :price => 7000000, 
+p5 = Property.create(:style => 'house', :price => 7000000, 
     :sqr_ft => 550, :bedrooms => 6, :bathrooms => 4, :garages => 4,
     :description => 'Undoubtedly, one of the area\'s finest homes and creating exciting new standards in luxurious 
     liveability with spectacular indoor/outdoor entertaining, this prestigious virtually new Smith & Tzannes 
@@ -81,7 +82,7 @@ p5 = Property.create(:type => 'house', :price => 7000000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2093', 
     :address_country => 'Australia')
 
-p6 = Property.create(:type => 'house', :price => 7000000, 
+p6 = Property.create(:style => 'house', :price => 7000000, 
     :sqr_ft => 396, :bedrooms => 4, :bathrooms => 3, :garages => 3,
     :description => 'Designed and crafted to absolute perfection, this brand new residence spares no expense 
     in providing the ultimate in luxury, sophistication and style. Set against a breathtaking ocean and coastal 
@@ -92,7 +93,7 @@ p6 = Property.create(:type => 'house', :price => 7000000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2095', 
     :address_country => 'Australia')
 
-p7 = Property.create(:type => 'apartment', :price => 7000000, 
+p7 = Property.create(:style => 'apartment', :price => 7000000, 
     :sqr_ft => 595, :bedrooms => 6, :bathrooms => 6, :garages => 4,
     :description => 'No expense has been spared in the creation of an indoor-outdoor dream family lifestyle at 
     this luxurious new architectural landmark. A sophisticated artwork for easy living, this brand new, 
@@ -106,7 +107,7 @@ p7 = Property.create(:type => 'apartment', :price => 7000000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2023', 
     :address_country => 'Australia')
 
-p8 = Property.create(:type => 'apartment', :price => 4750000, 
+p8 = Property.create(:style => 'apartment', :price => 4750000, 
     :sqr_ft => 375, :bedrooms => 4, :bathrooms => 3, :garages => 2,
     :description => 'Promising lifestyle excellence in a truly breathtaking location, this designer waterfront 
     residence captures spectacular views over the boat studded waters of Woodford Bay, all the way to the city. 
@@ -117,7 +118,7 @@ p8 = Property.create(:type => 'apartment', :price => 4750000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2066', 
     :address_country => 'Australia')
 
-p9 = Property.create(:type => 'penthouse', :price => 2500000, 
+p9 = Property.create(:style => 'penthouse', :price => 2500000, 
     :sqr_ft => 300, :bedrooms => 3, :bathrooms => 2, :garages => 2,
     :description => 'Imaginatively designed for indoor/outdoor living and lavish entertaining, this luxurious 
     residence is a true penthouse crowning a prestigious Wilkinson-Award-winning harbourside strata building. 
@@ -131,7 +132,7 @@ p9 = Property.create(:type => 'penthouse', :price => 2500000,
     :address_city => 'Sydney', :address_state => 'NSW', :address_code => '2027', 
     :address_country => 'Australia')
 
-p10 = Property.create(:type => 'house', :price => 2495000, 
+p10 = Property.create(:style => 'house', :price => 2495000, 
     :sqr_ft => 300, :bedrooms => 5, :bathrooms => 3, :garages => 2,
     :description => 'Secure your family\'s lifestyle future and take advantage of this once in a lifetime opportunity 
     - luxury Riverfront at this level won\'t be seen again. Located in the blue chip suburb of Chelmer in a quiet 
@@ -147,7 +148,7 @@ p10 = Property.create(:type => 'house', :price => 2495000,
     :address_city => 'Sydney', :address_state => 'QLD', :address_code => '4068', 
     :address_country => 'Australia')
 
-p11 = Property.create(:type => 'house', :price => 1750000, 
+p11 = Property.create(:style => 'house', :price => 1750000, 
     :sqr_ft => 312, :bedrooms => 3, :bathrooms => 2, :garages => 3,
     :description => 'Positioned in the heart of New Farm, adjacent to glorious New Farm Park is this meticulously 
     designed expansive, 312sqm multi-level home. Designed by Bvn Architecture to maximise the irreplaceable park 
@@ -161,7 +162,7 @@ p11 = Property.create(:type => 'house', :price => 1750000,
     :address_city => 'Sydney', :address_state => 'QLD', :address_code => '4005', 
     :address_country => 'Australia')
 
-p12 = Property.create(:type => 'house', :price => 1750000, 
+p12 = Property.create(:style => 'house', :price => 1750000, 
     :sqr_ft => 419, :bedrooms => 3, :bathrooms => 3, :garages => 5,
     :description => 'Located in the exclusive Dockside precinct at Macleay Tower & Villas, this luxurious 22nd 
     floor penthouse apartment exudes style, quality and striking visual appeal. The 419m2 apartment was modified 
