@@ -1,56 +1,92 @@
-<%= form_for @property do |f| %>
-    <%= f.label :style %>
-    <%= f.text_field :style %>
+<section class="wrapper-lg bg-highlight">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-1">
+                <h1>Add Property</h1>
+                <hr>
+                  <form role="form">  
+                  <%= form_for @property do |f| %>
+                    <div class="form-group">
+                        <%= f.label :style %>
+                        <%= f.text_field :style, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :price %>
+                        <%= f.text_field :price, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :sqr_ft %>
+                        <%= f.text_field :sqr_ft, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :bedrooms %>
+                        <%= f.text_field :bedrooms, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :bathrooms %>
+                        <%= f.text_field :bathrooms, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :garages %>
+                        <%= f.text_field :garages, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :description %>
+                        <%= f.text_field :description, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :map_image %>
+                        <%= f.text_field :map_image, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :date_listed %>
+                        <%= f.text_field :date_listed, :class => "form-control" %>
+                    </div>
+                </div>
 
-    <%= f.label :price %>
-    <%= f.text_field :price %>
+                <div class="col-sm-6 col-md-4 col-md-offset-1"> 
+                    <h1><br></h1>
+                    <hr>
+                    <div class="form-group">
+                        <%= f.label :address_number %>
+                        <%= f.text_field :address_number, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_street %>
+                        <%= f.text_field :address_street, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_city %>
+                        <%= f.text_field :address_city, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_suburb %>
+                        <%= f.text_field :address_suburb, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_state %>
+                        <%= f.text_field :address_state, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_code %>
+                        <%= f.text_field :address_code, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :address_country %>
+                        <%= f.text_field :address_country, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :sale_status %>
+                        <%= check_box_tag :sale_status, :class => "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.select :user_id, User.all.map {|user| [user.name, user.id]}, :include_blank => true, :prompt => "Select Property Owner..." %>
+                    </div>
+                    <%= f.submit :class => "btn btn-info" %>
+                <% end %>
+                </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
 
-    <%= f.label :sqr_ft %>
-    <%= f.text_field :sqr_ft %>
-
-    <%= f.label :bedrooms %>
-    <%= f.text_field :bedrooms %>
-
-    <%= f.label :bathrooms %>
-    <%= f.text_field :bathrooms %>
-
-    <%= f.label :garages %>
-    <%= f.text_field :garages %>
-
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <%= f.label :map_image %>
-    <%= f.text_field :map_image %>
-
-    <%= f.label :date_listed %>
-    <%= f.text_field :date_listed %>
-
-    <%= f.label :address_number %>
-    <%= f.text_field :address_number %>
-
-    <%= f.label :address_street %>
-    <%= f.text_field :address_street %>
-
-    <%= f.label :address_city %>
-    <%= f.text_field :address_city %>
-
-    <%= f.label :address_suburb %>
-    <%= f.text_field :address_suburb %>
-
-    <%= f.label :address_state %>
-    <%= f.text_field :address_state %>
-
-    <%= f.label :address_code %>
-    <%= f.text_field :address_code %>
-
-    <%= f.label :address_country %>
-    <%= f.text_field :address_country %>
-    
-    <%= f.label :sale_status %>
-    <%= check_box_tag :sale_status %>
-
-    <%= f.select :user_id, User.all.map {|user| [user.name, user.id]}, :include_blank => true, :prompt => "Select Property Owner..." %>
-
-    <%= f.submit %>
-<% end %>

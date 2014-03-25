@@ -11,7 +11,6 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @photo.property_id = params[:property_id]
-  binding.pry
   end
 
   def edit
