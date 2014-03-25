@@ -34,24 +34,23 @@ end
 
 gem 'haml'
 gem 'sextant'
-
 gem 'has_scope'
 gem 'paperclip'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
-
 gem 'bootstrap-sass'
-
 gem 'bcrypt-ruby'
-
 gem 'httparty'
-
-gem 'pry-rails'
-gem 'pry-debugger'
-gem 'pry-stack_explorer'
-gem 'better_errors'
 gem 'protected_attributes'
-gem 'annotate'
+
+group :development do
+    gem 'pry-rails'
+    gem 'pry-debugger'
+    gem 'pry-stack_explorer'
+    gem 'better_errors'
+
+    gem 'annotate'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

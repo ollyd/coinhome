@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140324021338) do
 
   create_table "arbitrators", force: true do |t|
     t.string "name"
+    t.string "image"
     t.text   "description"
     t.string "public_key"
     t.string "email"
@@ -43,14 +44,12 @@ ActiveRecord::Schema.define(version: 20140324021338) do
   create_table "properties", force: true do |t|
     t.string  "style"
     t.decimal "price"
-    t.text    "image"
     t.integer "sqr_ft"
     t.integer "bedrooms"
     t.integer "bathrooms"
     t.integer "garages"
     t.text    "description"
     t.text    "map_image"
-    t.text    "map_link"
     t.boolean "sale_status"
     t.date    "date_listed"
     t.string  "address_number"

@@ -5,14 +5,12 @@
 #  id              :integer          not null, primary key
 #  style           :string(255)
 #  price           :decimal(, )
-#  image           :text
 #  sqr_ft          :integer
 #  bedrooms        :integer
 #  bathrooms       :integer
 #  garages         :integer
 #  description     :text
 #  map_image       :text
-#  map_link        :text
 #  sale_status     :boolean
 #  date_listed     :date
 #  address_number  :string(255)
@@ -26,8 +24,8 @@
 #
 
 class Property < ActiveRecord::Base
-    attr_accessible :style, :price, :image, :sqr_ft, :bedrooms, :bathrooms, :garages,
-    :description, :map_image, :map_link, :sale_status, :date_listed, :address_number, 
+    attr_accessible :style, :price, :sqr_ft, :bedrooms, :bathrooms, :garages,
+    :description, :map_image, :sale_status, :date_listed, :address_number, 
     :address_street, :address_suburb, :address_city, :address_state, :address_code, :address_country, :user_id
 
     scope :by_style, -> style { where(:style => style) }
