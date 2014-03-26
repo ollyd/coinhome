@@ -1,5 +1,5 @@
     <section class="wrapper-md bg">
-        <div class="container">
+        <div class="container col-md-offset-2">
             <div class="row">
                 <!-- Main -->
                 <div class="col-sm-12 col-md-8">
@@ -47,7 +47,7 @@
                                     <ul class="list-unstyled">
                                         <li><strong>Type:</strong> <%= @property.style.capitalize %></li>
                                         <li><strong>Property:</strong> <%= @property.sqr_ft %> m<sup>2</sup></li>
-                                        <li><strong>Date Listed:</strong> <%= @property.date_listed %></li>
+                                        <li><strong>Date Listed:</strong> <%= @property.date_listed%></li>
                                         <li><strong>Bedrooms: </strong><%= @property.bedrooms %></li>
                                         <li><strong>Bathrooms: </strong><%= @property.bathrooms %></li>
                                         <li><strong>Garage:</strong> <%= @property.garages %></li>
@@ -102,11 +102,6 @@
                                             <div class="form-group">
                                                 <label for="example-contact-message">Message</label>
                                                 <textarea id="example-contact-message" class="form-control" rows="5"></textarea>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Send me a copy
-                                                </label>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Send Message</button>
                                         </form>

@@ -4,24 +4,23 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="widget padding-lg bg-dark">
-                        <h1 class="heading-md text-center text-light">Filter Properties, or Scroll Down to See All</h1>
-                       <!--  #<br class="spacer-lg"> -->
-                        <form action="" class="form-inline">
-                            <div class="row">
-                                <form action="/search" method='post'>
+                            <h1 class="heading-md text-center text-light">Filter Properties, or Scroll Down to See All</h1>
+                                <form action="/search" method='post' class="form-inline">
                                     <div class="col-md-2">
                                         <label for="">Price:</label>
                                             <select name="price" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
-                                                <option value= 1_000_000 >Max. 1,750 BTC</option>
-                                                <option value= 2_000_000 >Max. 3,250 BTC</option>
-                                                <option value= 3_000_000 >Max. 4,750 BTC</option>
-                                                <option value= 4_000_000 > 4750+ BTC</option>
+                                                <option value=""></option>
+                                                <option value= "1000000" >Max. 1,750 BTC</option>
+                                                <option value= "2000000" >Max. 3,250 BTC</option>
+                                                <option value= "3000000" >Max. 4,750 BTC</option>
+                                                <option value= "4000000" > 4750+ BTC</option>
                                             </select> 
                                     </div><!-- /.col -->
 
                                     <div class="col-md-2"> 
                                         <label for="">Suburb:</label>
                                             <select name="address_suburb" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
+                                                <option value=""></option>
                                                 <%= Property.all.each do |p| %> 
                                                     <option value=<%= p.address_suburb %>> 
                                                         <%=p.address_suburb %> 
@@ -33,6 +32,7 @@
                                     <div class="col-md-2">
                                         <label for="">Bedrooms:</label>
                                             <select name="bedrooms" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">  
+                                                <option value=""></option>
                                                 <option value="4">4</option>
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
@@ -44,6 +44,7 @@
                                     <div class="col-md-2">
                                         <label for="">Bathrooms:</label>
                                             <select name="bathrooms" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">  
+                                                <option value=""></option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
                                                 <option value="5">5</option>
@@ -54,6 +55,7 @@
                                     <div class="col-md-2">
                                         <label>Garages:</label>
                                             <select name="garages" class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary"> 
+                                                <option value=""></option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>

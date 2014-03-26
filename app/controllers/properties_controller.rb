@@ -29,12 +29,34 @@ class PropertiesController < ApplicationController
 
     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
     @last_traded_price = api['last']
-    
   end
 
   def search
     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
     @last_traded_price = api['last']
+
+    conditions  = []
+    arguments = {}
+ 
+    unless params[:bedrooms].blank?
+      conditions << 'bedrooms LIKE :bedrooms'
+      arguments[:bedrooms] = "%#{params[:bedrooms]}%"
+    end
+   
+    unless params[:hobby].blank?
+      conditions << 'hobby = :hobby'
+      arguments[:hobby] = params[:hobby]
+    end
+   
+    unless params[:age].blank?
+      conditions << 'age >= :age'
+      arguments[:age] = params[:age]
+    end
+   
+    all_conditions = conditions.join(' AND ')
+   
+    @search_results = Property.find(:all, :conditions => [all_conditions, arguments])
+    
     v1 = Property.where(:bedrooms => params[:bedrooms])
     v2 = v1.where(:bathrooms => params[:bathrooms])
     v3 = v2.where(:address_suburb => params[:address_suburb])

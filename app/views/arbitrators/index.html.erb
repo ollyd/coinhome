@@ -26,7 +26,7 @@
                         <p><%= arbitrator.name %></p>
                     </div>
                     <div class="thumbnail-meta">
-                        <p><%= arbitrator.public_key %></p>
+                        <p>Public Key: <%= truncate(arbitrator.public_key, length: 32) %></p>
                     </div>
                     <div class="thumbnail-meta">
                         <%= link_to('View Profile', arbitrator, :class => "btn btn-lg btn-block btn-success") %>
