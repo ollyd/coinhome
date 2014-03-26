@@ -38,30 +38,34 @@ class PropertiesController < ApplicationController
     conditions  = []
     arguments = {}
  
+    unless params[:suburb].blank?
+      conditions << 'suburb = :suburb'
+      arguments[:suburb] = params[:suburb]
+    end
+   
+    unless params[:bathrooms].blank?
+      conditions << 'bathrooms = :bathrooms'
+      arguments[:bathrooms] = params[:bathrooms]
+    end
+
     unless params[:bedrooms].blank?
-      conditions << 'bedrooms LIKE :bedrooms'
-      arguments[:bedrooms] = "%#{params[:bedrooms]}%"
+      conditions << 'bedrooms = :bedrooms'
+      arguments[:bedrooms] = params[:bedrooms]
     end
    
-    unless params[:hobby].blank?
-      conditions << 'hobby = :hobby'
-      arguments[:hobby] = params[:hobby]
+    unless params[:garages].blank?
+      conditions << 'garages = :garages'
+      arguments[:garages] = params[:garages]
     end
-   
-    unless params[:age].blank?
-      conditions << 'age >= :age'
-      arguments[:age] = params[:age]
+
+    unless params[:price].blank?
+      conditions << 'price <= :price'
+      arguments[:price] = params[:price]
     end
    
     all_conditions = conditions.join(' AND ')
    
     @search_results = Property.find(:all, :conditions => [all_conditions, arguments])
-    
-    v1 = Property.where(:bedrooms => params[:bedrooms])
-    v2 = v1.where(:bathrooms => params[:bathrooms])
-    v3 = v2.where(:address_suburb => params[:address_suburb])
-    v4 = v3.where(:price => params[:price].to_i)
-    @v5 = v4.where(:garages => params[:garages])
   end
 
   def update
