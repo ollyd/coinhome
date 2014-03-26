@@ -46,6 +46,7 @@ gem 'rails_12factor'
 gem 'thread_safe', '0.2.0'
 gem 'bitcoin-ruby', :require => 'bitcoin'
 
+
 group :development do
     gem 'pry-rails'
     gem 'pry-debugger'

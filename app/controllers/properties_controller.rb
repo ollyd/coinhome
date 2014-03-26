@@ -35,6 +35,8 @@ class PropertiesController < ApplicationController
     api = HTTParty.get('https://api.bitcoinaverage.com/ticker/global/AUD/')
     @last_traded_price = api['last']
 
+   ###### Allows some fields to blank when filtering listings
+
     conditions  = []
     arguments = {}
  

@@ -1,0 +1,32 @@
+<section class="wrapper-lg bg-highlight">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3">
+                <h1>Multisig Address Generation</h1>
+                    <hr>
+                    <p>Place the uncompressed Public Keys of the three particpants into the fields below. Remember to use your Public Key, not your Public Key Address. For the purposes of arbitration, two signatures of the three participants will be required in order to release the coins.</p>
+                    <hr>
+                    <%= form_tag('/bitcoins/multisig_address') do %>
+                    <div class="form-group">
+                        <%= label_tag :public_key_1 %>
+                        <%= text_field_tag :public_key_1 %>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <%= label_tag :public_key_2 %>
+                        <%= text_field_tag :public_key_2 %>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <%= label_tag :public_key_3 %>
+                        <%= text_field_tag :public_key_3 %>                  
+                    </div>
+                    <hr>
+                    <p>Once submitted, you will be required to send the funds to your newly created address. These funds will NOT become part of the Bitcoin network and no one will have access to them until the required number of signatures release them.</p>
+                    <hr>
+                    <%= submit_tag 'Confirm' %>
+                <% end %>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

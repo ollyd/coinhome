@@ -10,6 +10,10 @@ RealestateApp::Application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/bitcoins/new_address' => 'bitcoins#new_address'
+  get '/bitcoins/new_keys' => 'bitcoins#new_keys'
+  post '/bitcoins/multisig_address' => 'bitcoins#multisig_address'
+
   post '/search' => 'properties#search'
 
   resources :users
