@@ -7,13 +7,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate
 
-  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-
   private
-
-  def record_not_found
-    render 'shared/404', :status => 404
-  end
 
   def authenticate
     if session[:user_id].present?
