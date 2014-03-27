@@ -4,6 +4,7 @@ RealestateApp::Application.routes.draw do
 
   get 'pages/about' => "pages#about"
   get 'pages/contact' => "pages#contact"
+  post 'pages/contact' => 'pages#sendemail'
   get 'pages/faq' => "pages#faq"
 
   get '/login' => 'session#new'
@@ -13,6 +14,7 @@ RealestateApp::Application.routes.draw do
   get '/bitcoins/new_address' => 'bitcoins#new_address'
   get '/bitcoins/new_keys' => 'bitcoins#new_keys'
   post '/bitcoins/multisig_address' => 'bitcoins#multisig_address'
+  get '/bitcoins/complete' => 'bitcoins#complete'
 
   post '/search' => 'properties#search'
 

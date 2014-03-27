@@ -24,21 +24,22 @@
                 </div><!-- /.col -->
                 <div class="col-sm-12 col-md-4">
                     <h3>Contact by email</h3>
-                    <form role="form">
+                    <%= form_tag '/contact' do %>
                         <div class="form-group">
-                            <label for="exmaple-contact-email">Email address</label>
-                            <input type="email" class="form-control" id="exmaple-contact-email" placeholder="Enter email">
+                            <%= label_tag :email %>
+                            <%= email_field_tag :email, nil, :placeholder => 'Enter email', :class => 'form-control' %> 
                         </div>
                         <div class="form-group">
-                            <label for="example-contact-name">Name</label>
-                            <input type="text" class="form-control" id="example-contact-name" placeholder="Your name">
+                            <%= label_tag :name %>
+                            <%= email_field_tag :name, nil, :placeholder => 'Enter name', :class => 'form-control' %>
                         </div>
                         <div class="form-group">
-                            <label for="example-contact-message">Message</label>
-                            <textarea id="example-contact-message" class="form-control" rows="5"></textarea>
+                            <div class="form-group">
+                            <%= label_tag :message %>
+                            <%= text_area_tag :message, nil, :placeholder => 'Enter message', :class => 'form-control' %>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                        <%= submit_tag 'Send Message', class: 'btn btn-primary' %>
+                    <% end %>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container -->

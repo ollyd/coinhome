@@ -40,9 +40,9 @@ class PropertiesController < ApplicationController
     conditions  = []
     arguments = {}
  
-    unless params[:suburb].blank?
-      conditions << 'suburb = :suburb'
-      arguments[:suburb] = params[:suburb]
+    unless params[:address_suburb].blank?
+      conditions << 'address_suburb = :address_suburb'
+      arguments[:address_suburb] = params[:address_suburb]
     end
    
     unless params[:bathrooms].blank?

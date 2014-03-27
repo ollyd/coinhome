@@ -109,12 +109,12 @@
                                 </div><!-- /.row -->
                             </div><!-- /.panel-body -->
                         </div><!-- /.panel -->
-                        
+                     
                         <hr>
-                        <% if @current_user && @current_user.admin %>
                         <h3>Property Owner:</h3>
                         <p><%= link_to(@property.user.name, user_path(@property.user)) %></p>
-                        <p><%= link_to('Edit', edit_property_path(@property)) %> <%= link_to('Delete', @property, :method => :delete) %></p>
+                            <% if @current_user && @current_user.admin %>
+                            <p><%= link_to('Edit', edit_property_path(@property)) %> <%= link_to('Delete', @property, :method => :delete) %></p>
                         <% end %>
                     </article><!-- /.post -->
                 </div>
