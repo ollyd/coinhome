@@ -15,6 +15,7 @@ RealestateApp::Application.routes.draw do
   get '/bitcoins/new_keys' => 'bitcoins#new_keys'
   post '/bitcoins/multisig_address' => 'bitcoins#multisig_address'
   get '/bitcoins/complete' => 'bitcoins#complete'
+  post '/bitcoins/thanks' => 'bitcoins#thanks'
 
   post '/search' => 'properties#search'
 
