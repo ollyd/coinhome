@@ -45,6 +45,7 @@ gem 'protected_attributes'
 gem 'rails_12factor'
 gem 'thread_safe', '0.2.0'
 gem 'bitcoin-ruby', :require => 'bitcoin'
+gem 'better_exception_app'
 
 
 group :development do

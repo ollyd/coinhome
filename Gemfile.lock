@@ -36,6 +36,8 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    better_exception_app (0.1.1)
+      rails (>= 3.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bitcoin-ruby (0.0.5)
@@ -184,6 +186,7 @@ DEPENDENCIES
   annotate
   bcrypt-ruby
   better_errors
+  better_exception_app
   bitcoin-ruby
   bootstrap-sass
   coffee-rails (~> 4.0.0)
