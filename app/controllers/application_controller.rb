@@ -7,12 +7,21 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate
 
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
   private
+
+  def record_not_found
+    render text: "404 Not Found", status: 404
+  end
+  
   def authenticate
     if session[:user_id].present?
       @current_user = User.where(:id => session[:user_id]).first
       session[:user_id] = nil unless @current_user
     end
   end
+
+  
 
 end
