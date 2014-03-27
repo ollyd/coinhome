@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
   private
 
   def record_not_found
-    render text: "404 Not Found", status: 404
+    render 'shared/404', status: 404
   end
-  
+
   def authenticate
     if session[:user_id].present?
       @current_user = User.where(:id => session[:user_id]).first
