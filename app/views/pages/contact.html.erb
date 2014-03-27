@@ -24,14 +24,10 @@
                 </div><!-- /.col -->
                 <div class="col-sm-12 col-md-4">
                     <h3>Contact by email</h3>
-                    <%= form_tag '/contact' do %>
+                    <%= form_tag('/pages/contact') do %>
                         <div class="form-group">
                             <%= label_tag :email %>
                             <%= email_field_tag :email, nil, :placeholder => 'Enter email', :class => 'form-control' %> 
-                        </div>
-                        <div class="form-group">
-                            <%= label_tag :name %>
-                            <%= email_field_tag :name, nil, :placeholder => 'Enter name', :class => 'form-control' %>
                         </div>
                         <div class="form-group">
                             <div class="form-group">

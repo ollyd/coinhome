@@ -1,1 +1,1 @@
-ENV['PASSWORD'] = 'bingobango'
+ENV['GMAIL_PASSWORD'] = 'bingobango'
