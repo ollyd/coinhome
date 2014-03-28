@@ -11,7 +11,7 @@
                     </div>
                     <div class="form-group">
                         <%= f.label :price %>
-                        <%= f.text_field :price, :class => "form-control" %>
+                        <%= f.text_field :price, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :sqr_ft %>
@@ -19,11 +19,11 @@
                     </div>
                     <div class="form-group">
                         <%= f.label :bedrooms %>
-                        <%= f.text_field :bedrooms, :class => "form-control" %>
+                        <%= f.text_field :bedrooms, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :bathrooms %>
-                        <%= f.text_field :bathrooms, :class => "form-control" %>
+                        <%= f.text_field :bathrooms, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :garages %>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <%= f.label :description %>
-                        <%= f.text_area :description, :class => "form-control" %>
+                        <%= f.text_area :description, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :map_image %>
@@ -43,31 +43,31 @@
                     </div>
                     <div class="form-group">
                         <%= f.label :address_number %>
-                        <%= f.text_field :address_number, :class => "form-control" %>
+                        <%= f.text_field :address_number, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_street %>
-                        <%= f.text_field :address_street, :class => "form-control" %>
+                        <%= f.text_field :address_street, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_city %>
-                        <%= f.text_field :address_city, :class => "form-control" %>
+                        <%= f.text_field :address_city, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_suburb %>
-                        <%= f.text_field :address_suburb, :class => "form-control" %>
+                        <%= f.text_field :address_suburb, :class => "form-control",:required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_state %>
-                        <%= f.text_field :address_state, :class => "form-control" %>
+                        <%= f.text_field :address_state, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_code %>
-                        <%= f.text_field :address_code, :class => "form-control" %>
+                        <%= f.text_field :address_code, :class => "form-control", :required => true %>
                     </div>
                     <div class="form-group">
                         <%= f.label :address_country %>
-                        <%= f.text_field :address_country, :class => "form-control" %>
+                        <%= f.text_field :address_country, :class => "form-control", :required => true %>
                     </div>
                   <!--   <div class="form-group">
                         <%#= f.label :sale_status %>

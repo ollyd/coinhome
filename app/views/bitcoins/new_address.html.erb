@@ -9,17 +9,17 @@
                     <%= form_tag('/bitcoins/multisig_address') do %>
                     <div class="form-group">
                         <%= label_tag :public_key_1 %>
-                        <%= text_field_tag :public_key_1, nil, :placeholder => 'Insert key', :class => 'form-control' %>
+                        <%= text_field_tag :public_key_1, nil, :placeholder => 'Insert key', :class => 'form-control', :required => true %>
                     </div>
                     <hr>
                     <div class="form-group">
                         <%= label_tag :public_key_2 %>
-                        <%= text_field_tag :public_key_2, nil, :placeholder => 'Insert key', :class => 'form-control' %>
+                        <%= text_field_tag :public_key_2, nil, :placeholder => 'Insert key', :class => 'form-control', :required => true %>
                     </div>
                     <hr>
                     <div class="form-group">
                         <%= label_tag :public_key_3 %>
-                        <%= text_field_tag :public_key_3, nil, :placeholder => 'Insert key', :class => 'form-control' %>               
+                        <%= text_field_tag :public_key_3, nil, :placeholder => 'Insert key', :class => 'form-control', :required => true %>               
                     </div>
                     <hr>
                     <p>Once submitted, you will be required to send the funds to your newly created address. These funds will NOT become part of the Bitcoin network and no one will have access to them until the required number of signatures release them.</p>
