@@ -52,5 +52,10 @@ Gems:
 - better_errors
 
 --------------
+## To Do
+- Move Bitcoin multisig address functionality into the browser to increase security
+- Add functionality to allow BTC transcations to happen throught the site 
+
+--------------
 
 Thanks to Joel Turnbull and Mathilda Thompson at GA Sydney for their help with this. 
