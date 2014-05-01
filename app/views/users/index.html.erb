@@ -1,12 +1,9 @@
-<section class="wrapper-lg bg-highlight">
+<section>
     <div class="container">
         <h1>User Index</h1>
-        <br class="spacer-lg">
         <% @users.each do |user| %>
             <ul>
-                Name: <%= link_to(user.name, user) %>
-                <br>
-                Email: <%= user.email %>
+                Name: <%= link_to(user.first_name, user) %>
             </ul>
             <hr>
         <% end %>
